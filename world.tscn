@@ -1,0 +1,93 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6d2d66rd342c"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_nnnse"]
+
+[node name="World" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nnnse")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 40.0
+one_shot = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -832.0
+offset_top = -553.0
+offset_right = 987.0
+offset_bottom = 484.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -54.0
+offset_right = 91.5
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_constants/outline_size = 1
+theme_override_constants/h_separation = 1
+theme_override_font_sizes/font_size = 50
+text = "text"
+
+[node name="Buy 1 extra click" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 420.0
+offset_top = -303.0
+offset_right = 553.0
+offset_bottom = -253.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_constants/outline_size = 1
+theme_override_constants/h_separation = 1
+theme_override_font_sizes/font_size = 30
+text = "Click +1"
+
+[node name="Extraclickcounter" type="Label" parent="."]
+layout_mode = 0
+offset_left = 432.0
+offset_top = -248.0
+offset_right = 539.0
+offset_bottom = -225.0
+
+[node name="TimerLBL" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = 227.0
+offset_right = 142.0
+offset_bottom = 307.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "0 seconds"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Buy 1 extra click" to="." method="_on_buy_1_extra_click_pressed"]

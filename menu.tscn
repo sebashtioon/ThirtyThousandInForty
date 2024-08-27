@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://j0g036i2qwne"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_c0osv"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c0osv")
+
+[node name="blackbg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="skibid" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -149.0
+offset_right = 152.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "You will have 40 seconds to get 30,000 clicks! Are you ready?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="go button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -34.5
+offset_right = 98.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "I'm ready!"
+
+[node name="go button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = 53.5
+offset_right = 98.0
+offset_bottom = 122.5
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "Credits"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -278.0
+offset_top = 48.0
+offset_right = 278.0
+offset_bottom = 117.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "ThirtyThousandInForty"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="go button" to="." method="_on_go_button_pressed"]
+[connection signal="pressed" from="go button2" to="." method="_on_go_button_2_pressed"]
