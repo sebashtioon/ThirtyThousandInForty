@@ -1,3 +1,11 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
 config_version=5
 
 [application]
@@ -5,12 +13,12 @@ config_version=5
 config/name="ThirtyThousandInForty"
 config/description="Click 30,000 times in 40 seconds!"
 config/version="v1.0.0"
+config/tags=PackedStringArray("2d", "meaningless")
 run/main_scene="res://menu.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="res://logo.png"
-config/tags=PackedStringArray("2d", "meaningless")
 
 [rendering]
 
